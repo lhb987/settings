@@ -148,18 +148,18 @@ fi
 export CUDA_HOME=/usr/local/cuda
 export PATH=$CUDA_HOME/bin:$PATH
 #export PATH=/usr/local/cuda/bin:${PATH}
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jdhwang/.mujoco/mjpro150/bin:$CUDA_HOME/lib64
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jhseon/.mujoco/mjpro150/bin:$CUDA_HOME/lib64
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/nvidia/lib64 :/usr/local/lib:/home/jaedong/cuda-8.0/lib64:/usr/lib/x86_64-linux-gnu
 
-#MUJOCO_PY_MJKEY_PATH=/home/jdhwang/.mujoco/mjkey.txt
-#MUJOCO_PY_MJPRO_PATH=/home/jdhwang/.mujoco/mjpro150
-#PYTHONPATH="${PYTHONPATH}:/home/jdhwang/libs/baselines/"
-#PYTHONPATH="${PYTHONPATH}:/home/jdhwang/libs/baselines2/"
-#PYTHONPATH="${PYTHONPATH}:/home/jdhwang/backup/Dual_RL_CV/init_exps/share/ver3/learn_lib"
+#MUJOCO_PY_MJKEY_PATH=/home/jhseon/.mujoco/mjkey.txt
+#MUJOCO_PY_MJPRO_PATH=/home/jhseon/.mujoco/mjpro150
+#PYTHONPATH="${PYTHONPATH}:/home/jhseon/libs/baselines/"
+#PYTHONPATH="${PYTHONPATH}:/home/jhseon/libs/baselines2/"
+#PYTHONPATH="${PYTHONPATH}:/home/jhseon/backup/Dual_RL_CV/init_exps/share/ver3/learn_lib"
 export PYTHONPATH
-function apt-history(){
+function apt-history({
     case "$1" in
-      install)
+      install
             cat /var/log/apt/history.log | grep 'install '
             ;;
       upgrade|remove)
