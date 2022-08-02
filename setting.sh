@@ -21,6 +21,8 @@ cp .bashrc ~/
 cp .gitignore ~/
 cp .gitconfig ~/
 
+vim +'PlugInstall --sync' +qa
+
 # zsh install
 apt-get -y install zsh
 apt-get -y install git-core
