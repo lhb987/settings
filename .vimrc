@@ -11,14 +11,14 @@ execute pathogen#infect()
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
-"let g:seoul256_background = 233
-"colo seoul256
+let g:seoul256_background = 233
+colo seoul256
 
 " seoul256 (light):
 "   Range:   252 (darkest) ~ 256 (lightest)
 "   Default: 253
-let g:seoul256_background = 256
-colo seoul256-light
+"let g:seoul256_background = 256
+"colo seoul256-light
 
 "set paste
 
@@ -36,8 +36,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'tommcdo/vim-lion'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set tags=/data/tags
 
 
 " <F2> Switch Window
@@ -101,6 +104,7 @@ let g:indentLine_enabled = 0
 let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'text', 'sh']
 let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 let g:indentLine_maxLines = 3000
+nnoremap \il :IndentLinesToggle
 
 set nu
 set mouse=a
@@ -112,6 +116,9 @@ set smartindent
 set smarttab
 set cursorline
 set modeline
+set paste
+set shiftwidth=4
+set title
 
 set backspace=2
 
